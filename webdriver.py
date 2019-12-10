@@ -34,6 +34,7 @@ class WebDriver(object):
         chrome_options.add_argument('--hide-scrollbars')
         # 浏览器不提供可视化页面. linux下如果系统不支持可视化不加这条会启动失败
         chrome_options.add_argument('--headless')
+        chrome_options.add_argument(f'user-agent=I LOVE TTW')
         # 不加载图片, 提升速度
         chrome_options.add_argument('blink-settings=imagesEnabled=false')
         self.driver = webdriver.Chrome(self.driver_file, chrome_options=chrome_options)
